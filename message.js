@@ -10,7 +10,8 @@ $(document).ready(function() {
         params: {
             appRef: Date.now(), // Set this value to a unique reference for the application
             uniqueAppRef: true, // indicates that the appRef provided is unique
-            debugBanks: true
+            debugBanks: true,
+            cssOverride: "court0brown.github.io/beeloans/style.css"
         },
         callback: function(response, data) {
             switch (response) {
