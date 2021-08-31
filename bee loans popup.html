@@ -1,0 +1,179 @@
+<html dir="ltr" lang="en" class=""><head></head><body><h1>Bee Loans 🐝</h1>
+   
+    <style>
+    h1{
+        width: 400px;
+  border: 15px solid #fffdd0;
+  padding: 50px;
+  margin: 20px;
+  font-size:60px;
+    }
+body {
+  background-color: #FBDB48;
+}
+    div1 { 
+        
+  font-size:20px;
+  padding: 5px;
+    } 
+    div2 { 
+        font-size:25px; 
+        background-color: white;
+        width:100%;
+        height:100%;
+    } 
+    h2{font-size:40px; width: auto; margin: auto; border: 3px solid #d2b55b;
+}
+    .buttons {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        background-color:#eedc82;
+    }
+
+    .buttons button {
+        width: 100%;
+background-color:#fffdd0;
+
+    }
+    .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#fffdd0;
+  color: black;
+  text-align: center;
+}
+</style>
+<style>
+    h1{
+        width: 400px;
+  border: 15px solid #fffdd0;
+  padding: 50px;
+  margin: 20px;
+  font-size:60px;
+    }
+body {
+  background-color: #FBDB48;
+}
+    div1 { 
+        
+  font-size:20px;
+  padding: 5px;
+    } 
+    div2 { 
+        font-size:25px; 
+        background-color: white;
+        width:100%;
+    } 
+    h2{font-size:40px; width: auto; margin: auto; border: 3px solid #d2b55b;
+}
+    .buttons {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        background-color:#eedc82;
+    }
+
+    .buttons button {
+        width: 100%;
+background-color:#fffdd0;
+
+    }
+</style><div>With all that's going on in the world these days, sometimes finances can get sticky. 🍯 <br></div><h2 id="Menu" class="tabcontent">
+    
+    <table class="buttons">
+        <tbody><tr>
+    <td><button>Home</button>
+    </td><td><button>Loans</button>
+    </td><td><button>About Us</button>
+    </td><td><button>Log In</button>
+    </td></tr></tbody></table>
+    
+</h2>
+<div>Login to your internet backing to get approved in less than 24hrs!</div>
+
+<script type="text/javascript"
+    src="https://6dadc58e31982fd9f0be-d4a1ccb0c1936ef2a5b7f304db75b8a4.ssl.cf4.rackcdn.com/CS-Integrated-Popup-v1.min.js"></script>
+    <div style="margin-left: auto; margin-right: auto; max-width: 200px">
+        <a href="https" id="cs-link" class="btn btn-primary">Retrieve Bank Statements</a>
+        <div class="cs-poweredby">Powered By <a href="http://creditsense.com.au"
+target="_blank">CreditSense</a></div>
+    </div>
+
+<div class="footer">
+  <p>Powered by Pollen💐</p>
+</div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://6dadc58e31982fd9f0be-d4a1ccb0c1936ef2a5b7f304db75b8a4.ssl.cf4.rackcdn.com/CS-Integrated-Iframe-v1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+      $.CreditSense.Popup({
+        elementSelector: "#cs-link",
+        client: "NAVB001",
+        params: {
+          appRef: Date.now(), // Default not provided = Ask.
+          centerlink: true, // DEFAULT = TRUE
+          debugBanks: true,
+          bankOverwrite: "", // Bank ID, not provided = ask.
+          alreadyAgreedTerms: false, // Default = False = Ask.
+          waitCompletion: true // Default = true, pop-up closes only on success. VS using polling to tell.
+        },
+        debug: true,
+        callback: function (response) {
+          switch (response) {
+            case "99": // Success Bank details retrieved successfully.
+              $('#applysection').hide();
+              $('#success').show();
+              break;
+            case "0": // Initialised
+              //$('#cs-result').html('<span>Initialised</span>');
+              break;
+            case "1": // Application has opened in pop-up window.
+              //$('#cs-result').html('<span>In Progress</span>');
+              break;
+            case "-1": // Application window has closed before completing.
+              $('#pageclose').show();
+              break;
+            case "-2": // Bank failure - Unable to log in.
+
+              break;
+            case "-3": // Bank failure - Unable to log in. -- too many times (2)
+              $('#applysection').hide();
+              $('#failure').show();
+              break;
+            case "-4": // Bank Missing - Manual Upload Only.
+              // $('#cs-result').html('<span>Manual Bank Upload - Unable to use CreditSense.</span>');
+              break;
+            // Case 5 password failure.
+
+            case "-99": // Unable to reach CreditSense
+              //$('#cs-result').html('<span>Unable to reach CreditSense services - fall-back method.</span>');
+              break;
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+    // Document ready waits for the DOM to complete loading
+    // This insures that any elements that are referenced in your code are drawn when attempting to reference.
+    $(document).ready(function () {
+
+      // add some jQuery on click hide/show to the page to look fancy!
+      $('#ApplyToday').on('click', function (e) {
+        e.preventDefault();
+
+        $(this).hide({ duration: 200, queue: false });
+        $('#applysection').fadeIn({ duration: 800, queue: false });
+
+      });
+
+    });
+  </script>
+  <script src="messagepop.js"></script>
+
+</body></html>

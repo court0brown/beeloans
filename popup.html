@@ -1,0 +1,41 @@
+<html dir="ltr" lang="en" class=""><head><link rel="stylesheet" href="style.css"></head><body><h1>Bee Loans 🐝</h1>
+    <div>With all that's going on in the world these days, sometimes finances can get sticky. 🍯 <br></div><h2 id="Menu" class="tabcontent">
+        
+    </h2>
+    <div id="navbar">
+        <a href="bee.html">Home</a>
+        <a href="#loans">Loans</a>
+        <a href="#contact">Contact</a>
+        <a href="iframepage.html">iFrame</a>
+        <a href="kiosk.html">Kiosk</a>
+        <a href="popup.html">Pop-Up</a>
+      </div>
+    <div class="body">Login to your internet backing to get approved in less than 24hrs!</div>
+        <div>
+        <p><a class="btn btn-large btn-success"  id="cs-link" href="#">Apply for a loan through Credit Sense</a></p>
+    </div>
+    <div class="footer">
+      <p>Powered by Pollen💐</p>
+    </div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript"
+    src="https://6dadc58e31982fd9f0be-d4a1ccb0c1936ef2a5b7f304db75b8a4.ssl.cf4.rackcdn.com/CS-Integrated-Popup-v1.min.js"></script>
+    <script src="messagepop.js"></script>
+    <script>
+        // Document ready waits for the DOM to complete loading
+        // This insures that any elements that are referenced in your code are drawn when attempting to reference.
+        $(document).ready(function () {
+    
+          // add some jQuery on click hide/show to the page to look fancy!
+          $('#ApplyToday').on('click', function (e) {
+            e.preventDefault();
+    
+            $(this).hide({ duration: 200, queue: false });
+            $('#applysection').fadeIn({ duration: 800, queue: false });
+    
+          });
+    
+        });
+      </script>
+    </body></html>
