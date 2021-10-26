@@ -7,6 +7,7 @@ $(document).ready(function() {
         client: "BEEL001",
         elementSelector: "#creditSenseIFrame",
         enableDynamicHeight: true,
+        
         params: {
             appRef: Date.now(), // Set this value to a unique reference for the application
             uniqueAppRef: true, // indicates that the appRef provided is unique

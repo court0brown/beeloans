@@ -1,9 +1,9 @@
     h1{
     width: 70%;
-  border: 5px solid #fffdd0;
   padding: 15px;
   font-size:70px;
   text-align: center;
+  display: inline;
     }
 h2{
     font-size:40px; 
@@ -46,5 +46,10 @@ body {
     font-size:20px;
 }
 .iframe{
-    background-color:#ffefa9;
+    background-color:#ffefa9; 
+    display: inline;
+    width: 90%;
+    padding: 14px 40px;
+    border: 5px solid #fffdd0;
+
 }
